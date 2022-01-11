@@ -1,0 +1,11 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "Api REST crianda utilizando NodeJs e Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Pimentel",
+  "license": "ISC"
+}
