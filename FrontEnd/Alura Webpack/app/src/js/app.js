@@ -1,22 +1,24 @@
-import { NegociacaoController } from './controllers/negociacao-controller.js';
+import { NegociacaoController } from './controllers/negociacao-controller.js'
+import 'bootstrap/dist/css/bootstrap.css'
 
-const controller = new NegociacaoController();
-const form = document.querySelector('.form');
+const controller = new NegociacaoController()
+const form = document.querySelector('.form')
 if (form) {
-    form.addEventListener('submit', event => {
-        event.preventDefault();
-        controller.adiciona();
-    });
-}
-else {
-    throw Error('Não foi possível inicializar a aplicação. Verifique se o form existe.');
+	form.addEventListener('submit', (event) => {
+		event.preventDefault()
+		controller.adiciona()
+	})
+} else {
+	throw Error(
+		'Não foi possível inicializar a aplicação. Verifique se o form existe.'
+	)
 }
 
-const botaoImporta = document.querySelector('#botao-importa');
+const botaoImporta = document.querySelector('#botao-importa')
 if (botaoImporta) {
-    botaoImporta.addEventListener('click', () => {
-        controller.importaDados();
-    });
+	botaoImporta.addEventListener('click', () => {
+		controller.importaDados()
+	})
 } else {
-    throw Error('Botão importa não foi encontrado');
+	throw Error('Botão importa não foi encontrado')
 }
